@@ -3,7 +3,7 @@
 #include <unistd.h>
 #include <fcntl.h>
 #include <string.h>
-// upload wrong
+
 int AppendString (const char* str) {
     int fd = open("test.txt", O_CREAT|O_RDWR|O_APPEND);
     if(fd < 0) {

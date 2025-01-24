@@ -1,5 +1,5 @@
 #include<fstream>
-// upload wrong
+
 void AppendString (const std::string& str) {
     std::ofstream output("test.txt", std::ofstream::app) ;
     if (!output.is_open()) {

@@ -1,11 +1,9 @@
-//wrong example
+//wrong and correct example
 #include <stdio.h>
 #include <unistd.h>
 #include <fcntl.h>
 #include<iostream>
 #include<fstream>
-
-// upload wrong
 
 char read_last_byte(const char* filename) { //wrong
     char result = 0;

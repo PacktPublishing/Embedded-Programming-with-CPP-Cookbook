@@ -1,5 +1,5 @@
 #include<iostream>
-// upload wrong
+
 class A {
 public:
     void print() {
