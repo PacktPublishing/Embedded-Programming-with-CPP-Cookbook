@@ -20,7 +20,9 @@ void WriteData(int fd, const void* ptr, size_t size) {
 
 void WriteMessage(int fd, const char* str) {
   uint32_t size = strlen(str);
-  uint32_t encoded_size = htonl(size);
+  //H:48 e:65 l:6C l:6C o:6F, W:57 o:6F r:72 l:6C d:64
+  // uint32_t encoded_size = size; //05000000; 48656C6C 6F;050000 00;576F72 6C64
+  uint32_t encoded_size = htonl(size); //00000005; 48656C6C 6F;000000 05;576F72 6C64
   WriteData(fd, &encoded_size, sizeof(encoded_size));
   WriteData(fd, str, size);
 }
