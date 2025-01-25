@@ -86,6 +86,7 @@ struct Message {
 
 std::ostream& operator<<(std::ostream& o, const Message& m) {
   o << "(x=" << m.x << ", y=" << m.y << ")";
+  return o;
 }
 
 class CoordLogger : public Reader<Message> {

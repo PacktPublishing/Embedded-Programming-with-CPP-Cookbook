@@ -32,6 +32,7 @@ void CatchByPointer() {
   }
   catch (Error* e) {
     std::cout << " Error caught" << std::endl;
+    // e->~Error(); //
   }
 }
 
